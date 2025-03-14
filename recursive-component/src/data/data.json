@@ -1,0 +1,31 @@
+[
+  {
+    "name": "ION",
+    "position": "Software Engineer",
+    "time": "February 2023",
+    "children": [
+      {
+        "name": "ION Treasury",
+        "position": "Software Engineer",
+        "time": "June 2023"
+      },
+      {
+        "name": "Lab49",
+        "position": "Software Engineer Consultant",
+        "time": "February 2023",
+        "children": [
+          {
+            "name": "Morgan Stanley",
+            "position": "Frontend Engineer Consultant",
+            "time": "February 2021"
+          },
+          {
+            "name": "J.P. Morgan",
+            "position": "Frontend Engineer Consultant",
+            "time": "May 2020"
+          }
+        ]
+      }
+    ]
+  }
+]
