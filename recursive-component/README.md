@@ -1,4 +1,4 @@
-# 
+# This code base refers to my blog post at https://www.prakashgurung.com/blog/react-recursive-component
 
 ## Getting Started
 
