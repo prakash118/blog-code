@@ -1,11 +1,14 @@
-import { Example } from "@/_components/example";
+import { Example } from '@/_components/example';
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
     <div className="w-full">
       <h1 className="text-lg font-bold text-center">URL state Demo</h1>
       <div>
-        <Example />
+        <Suspense fallback={<>Loading...</>}>
+          <Example />
+        </Suspense>
       </div>
       <div className="my-6">
         <p className="italic">* Remember to use zod to validate the URL*</p>
