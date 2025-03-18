@@ -4,7 +4,7 @@ import { UserDataTable } from './_components/users-table';
 export const dynamic = 'force-dynamic';
 
 async function getUsers() {
-  const response = await fetch('http://localhost:3000/api/users');
+  const response = await fetch(`${process.env.API}/api/users`);
   return await response.json();
 }
 
