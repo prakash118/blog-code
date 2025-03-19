@@ -19,7 +19,7 @@ const items = [
     icon: Home,
   },
   {
-    title: 'Table with URL state',
+    title: 'Table with URL (custom hook)',
     url: '/simple',
     icon: Drill,
   },
@@ -34,7 +34,7 @@ export function AppSidebar() {
   const pathname = usePathname();
   return (
     <Sidebar collapsible="icon">
-      <SidebarContent>
+      <SidebarContent className="pt-4">
         <SidebarGroup>
           <SidebarGroupLabel>Pages</SidebarGroupLabel>
           <SidebarGroupContent>

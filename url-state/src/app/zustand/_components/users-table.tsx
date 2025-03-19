@@ -1,5 +1,6 @@
 'use client';
 import { columns } from '@/_components/columns';
+import { CopyButton } from '@/_components/copy-button';
 import { DataTable } from '@/_components/data-table';
 import { TableControls } from '@/_components/table-controls';
 import { useTableStore } from '@/lib/store';
@@ -31,6 +32,9 @@ export function UserDataTable({ data }: { data: Users[] }) {
 
   return (
     <div>
+      <div className="flex justify-center py-4">
+        <CopyButton />
+      </div>
       <TableControls table={table} />
       <DataTable table={table} />
     </div>

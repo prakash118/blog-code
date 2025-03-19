@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Shirt } from 'lucide-react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { CopyButton } from './copy-button';
 
 const sizes = [
   {
@@ -72,7 +73,7 @@ export function Example() {
           <li>Size: {size}</li>
         </ul>
       </div>
-      <div>
+      <div className="flex justify-center items-center flex-col mb-4">
         <h2 className="mb-2 font-bold">Controls</h2>
         <div className="flex gap-4">
           <DropDown
@@ -86,6 +87,9 @@ export function Example() {
             onUpdate={handleUpdate('color')}
           />
         </div>
+      </div>
+      <div className="flex justify-center">
+        <CopyButton />
       </div>
     </div>
   );

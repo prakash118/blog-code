@@ -12,6 +12,10 @@ export default function Home() {
       </div>
       <div className="my-6">
         <p className="italic">* Remember to use zod to validate the URL*</p>
+        <p className="p-2">
+          The code is up on my GitHub @
+          https://github.com/prakash118/blog-code/tree/main/url-state
+        </p>
       </div>
     </div>
   );

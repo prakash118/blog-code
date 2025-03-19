@@ -20,8 +20,14 @@ export default async function Page() {
         User data with Tanstack table & Zustand store with connected with URL
       </h1>
       <p className="text-center">
-        Sort or/and filter the table to observe updates in both the data
-        displayed and the URL.
+        To share a specific filtered or/and sorted view of the table, first apply
+        the desired changes. Then, copy and paste the updated URL into a new
+        tab. This will display the exact same screen to anyone you share the
+        link with.
+      </p>
+      <p className="text-center py-3">
+        Code for this page is available at my GitHub:
+        https://github.com/prakash118/blog-code/tree/main/url-state/src/app/zustand
       </p>
       <div>
         <Suspense fallback={<div>Loading...</div>}>

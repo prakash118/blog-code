@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import './globals.css';
 import { AppSidebar } from '@/_components/app-sidebar';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -29,9 +31,28 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="w-full bg-amber-300 z-50 relative mb-2 text-center">
+          <p>
+            This demo is for the blog post{' '}
+            <Link
+              href="https://www.prakashgurung.com/blog/react-url-state"
+              target="_blank"
+            >
+              <Button variant="link" className="cursor-pointer">
+                Using URL params as the state
+              </Button>
+            </Link>
+            @
+            <Link href="https://www.prakashgurung.com" target="_blank">
+              <Button variant="link" className="cursor-pointer">
+                prakashgurung.com
+              </Button>
+            </Link>
+          </p>
+        </div>
         <SidebarProvider>
           <AppSidebar />
-          <main className='m-4 w-full'>
+          <main className="m-4 w-full">
             <SidebarTrigger />
             {children}
           </main>

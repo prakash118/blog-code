@@ -4,7 +4,7 @@ import { useCallback, useMemo } from 'react';
 
 type SetValue<T> = (old: T) => T;
 
-export const useQueryString = <T,>(qName: string): [T, OnChangeFn<T>] => {
+export const useUrlState = <T,>(qName: string): [T, OnChangeFn<T>] => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -32,7 +32,7 @@ export const useQueryString = <T,>(qName: string): [T, OnChangeFn<T>] => {
           ? (updaterOrValue as SetValue<T>)(getValue)
           : updaterOrValue;
       router.push(
-        pathname + '?' + createQueryString(qName, JSON.stringify(value))
+        `${pathname}?${createQueryString(qName, JSON.stringify(value))}`
       );
     },
     [createQueryString, getValue, pathname, qName, router]
